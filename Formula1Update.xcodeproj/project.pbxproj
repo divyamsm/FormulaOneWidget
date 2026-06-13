@@ -6,43 +6,57 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F10000142FDE200000000001 /* Formula1Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F10000012FDE200000000001 /* Formula1Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F10000152FDE200000000001 /* Formula1Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000022FDE200000000001 /* Formula1Widget.swift */; };
+		F10000162FDE200000000001 /* F1Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000042FDE200000000001 /* F1Models.swift */; };
+		F10000172FDE200000000001 /* OpenF1Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000052FDE200000000001 /* OpenF1Service.swift */; };
+		F10000182FDE200000000001 /* F1WidgetCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000072FDE200000000001 /* F1WidgetCardView.swift */; };
+		F10000192FDE200000000001 /* F1Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000042FDE200000000001 /* F1Models.swift */; };
+		F100001A2FDE200000000001 /* OpenF1Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000052FDE200000000001 /* OpenF1Service.swift */; };
+		F100001B2FDE200000000001 /* F1SnapshotStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000062FDE200000000001 /* F1SnapshotStore.swift */; };
+		F100001C2FDE200000000001 /* F1WidgetCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000072FDE200000000001 /* F1WidgetCardView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
-		045AD5762FDE110600CFE502 /* PBXContainerItemProxy */ = {
+		F10000102FDE200000000001 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 045AD5602FDE110400CFE502 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 045AD5672FDE110400CFE502;
-			remoteInfo = Formula1Update;
-		};
-		045AD5802FDE110600CFE502 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 045AD5602FDE110400CFE502 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 045AD5672FDE110400CFE502;
-			remoteInfo = Formula1Update;
+			remoteGlobalIDString = F10000092FDE200000000001;
+			remoteInfo = Formula1Widget;
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F10000082FDE200000000001 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F10000142FDE200000000001 /* Formula1Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		045AD5682FDE110400CFE502 /* Formula1Update.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Formula1Update.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		045AD5752FDE110600CFE502 /* Formula1UpdateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Formula1UpdateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		045AD57F2FDE110600CFE502 /* Formula1UpdateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Formula1UpdateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F10000012FDE200000000001 /* Formula1Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Formula1Widget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F10000022FDE200000000001 /* Formula1Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formula1Widget.swift; sourceTree = "<group>"; };
+		F10000032FDE200000000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F10000042FDE200000000001 /* F1Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F1Models.swift; sourceTree = "<group>"; };
+		F10000052FDE200000000001 /* OpenF1Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenF1Service.swift; sourceTree = "<group>"; };
+		F10000062FDE200000000001 /* F1SnapshotStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F1SnapshotStore.swift; sourceTree = "<group>"; };
+		F10000072FDE200000000001 /* F1WidgetCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F1WidgetCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		045AD56A2FDE110400CFE502 /* Formula1Update */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Formula1Update;
-			sourceTree = "<group>";
-		};
-		045AD5782FDE110600CFE502 /* Formula1UpdateTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Formula1UpdateTests;
-			sourceTree = "<group>";
-		};
-		045AD5822FDE110600CFE502 /* Formula1UpdateUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Formula1UpdateUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -55,14 +69,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		045AD5722FDE110600CFE502 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		045AD57C2FDE110600CFE502 /* Frameworks */ = {
+		F100000A2FDE200000000001 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,8 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				045AD56A2FDE110400CFE502 /* Formula1Update */,
-				045AD5782FDE110600CFE502 /* Formula1UpdateTests */,
-				045AD5822FDE110600CFE502 /* Formula1UpdateUITests */,
+				F100000C2FDE200000000001 /* Formula1Shared */,
+				F100000D2FDE200000000001 /* Formula1Widget */,
 				045AD5692FDE110400CFE502 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,10 +93,29 @@
 			isa = PBXGroup;
 			children = (
 				045AD5682FDE110400CFE502 /* Formula1Update.app */,
-				045AD5752FDE110600CFE502 /* Formula1UpdateTests.xctest */,
-				045AD57F2FDE110600CFE502 /* Formula1UpdateUITests.xctest */,
+				F10000012FDE200000000001 /* Formula1Widget.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F100000C2FDE200000000001 /* Formula1Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F10000042FDE200000000001 /* F1Models.swift */,
+				F10000052FDE200000000001 /* OpenF1Service.swift */,
+				F10000062FDE200000000001 /* F1SnapshotStore.swift */,
+				F10000072FDE200000000001 /* F1WidgetCardView.swift */,
+			);
+			path = Formula1Shared;
+			sourceTree = "<group>";
+		};
+		F100000D2FDE200000000001 /* Formula1Widget */ = {
+			isa = PBXGroup;
+			children = (
+				F10000022FDE200000000001 /* Formula1Widget.swift */,
+				F10000032FDE200000000001 /* Info.plist */,
+			);
+			path = Formula1Widget;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,10 +128,12 @@
 				045AD5642FDE110400CFE502 /* Sources */,
 				045AD5652FDE110400CFE502 /* Frameworks */,
 				045AD5662FDE110400CFE502 /* Resources */,
+				F10000082FDE200000000001 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F10000112FDE200000000001 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				045AD56A2FDE110400CFE502 /* Formula1Update */,
@@ -117,51 +145,24 @@
 			productReference = 045AD5682FDE110400CFE502 /* Formula1Update.app */;
 			productType = "com.apple.product-type.application";
 		};
-		045AD5742FDE110600CFE502 /* Formula1UpdateTests */ = {
+		F10000092FDE200000000001 /* Formula1Widget */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 045AD58C2FDE110600CFE502 /* Build configuration list for PBXNativeTarget "Formula1UpdateTests" */;
+			buildConfigurationList = F10000132FDE200000000001 /* Build configuration list for PBXNativeTarget "Formula1Widget" */;
 			buildPhases = (
-				045AD5712FDE110600CFE502 /* Sources */,
-				045AD5722FDE110600CFE502 /* Frameworks */,
-				045AD5732FDE110600CFE502 /* Resources */,
+				F100000B2FDE200000000001 /* Sources */,
+				F100000A2FDE200000000001 /* Frameworks */,
+				F100000F2FDE200000000001 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				045AD5772FDE110600CFE502 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				045AD5782FDE110600CFE502 /* Formula1UpdateTests */,
-			);
-			name = Formula1UpdateTests;
+			name = Formula1Widget;
 			packageProductDependencies = (
 			);
-			productName = Formula1UpdateTests;
-			productReference = 045AD5752FDE110600CFE502 /* Formula1UpdateTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		045AD57E2FDE110600CFE502 /* Formula1UpdateUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 045AD58F2FDE110600CFE502 /* Build configuration list for PBXNativeTarget "Formula1UpdateUITests" */;
-			buildPhases = (
-				045AD57B2FDE110600CFE502 /* Sources */,
-				045AD57C2FDE110600CFE502 /* Frameworks */,
-				045AD57D2FDE110600CFE502 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				045AD5812FDE110600CFE502 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				045AD5822FDE110600CFE502 /* Formula1UpdateUITests */,
-			);
-			name = Formula1UpdateUITests;
-			packageProductDependencies = (
-			);
-			productName = Formula1UpdateUITests;
-			productReference = 045AD57F2FDE110600CFE502 /* Formula1UpdateUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
+			productName = Formula1Widget;
+			productReference = F10000012FDE200000000001 /* Formula1Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -176,13 +177,8 @@
 					045AD5672FDE110400CFE502 = {
 						CreatedOnToolsVersion = 16.4;
 					};
-					045AD5742FDE110600CFE502 = {
+					F10000092FDE200000000001 = {
 						CreatedOnToolsVersion = 16.4;
-						TestTargetID = 045AD5672FDE110400CFE502;
-					};
-					045AD57E2FDE110600CFE502 = {
-						CreatedOnToolsVersion = 16.4;
-						TestTargetID = 045AD5672FDE110400CFE502;
 					};
 				};
 			};
@@ -201,8 +197,7 @@
 			projectRoot = "";
 			targets = (
 				045AD5672FDE110400CFE502 /* Formula1Update */,
-				045AD5742FDE110600CFE502 /* Formula1UpdateTests */,
-				045AD57E2FDE110600CFE502 /* Formula1UpdateUITests */,
+				F10000092FDE200000000001 /* Formula1Widget */,
 			);
 		};
 /* End PBXProject section */
@@ -215,14 +210,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		045AD5732FDE110600CFE502 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		045AD57D2FDE110600CFE502 /* Resources */ = {
+		F100000F2FDE200000000001 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -236,35 +224,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F10000192FDE200000000001 /* F1Models.swift in Sources */,
+				F100001A2FDE200000000001 /* OpenF1Service.swift in Sources */,
+				F100001B2FDE200000000001 /* F1SnapshotStore.swift in Sources */,
+				F100001C2FDE200000000001 /* F1WidgetCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		045AD5712FDE110600CFE502 /* Sources */ = {
+		F100000B2FDE200000000001 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		045AD57B2FDE110600CFE502 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				F10000152FDE200000000001 /* Formula1Widget.swift in Sources */,
+				F10000162FDE200000000001 /* F1Models.swift in Sources */,
+				F10000172FDE200000000001 /* OpenF1Service.swift in Sources */,
+				F10000182FDE200000000001 /* F1WidgetCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		045AD5772FDE110600CFE502 /* PBXTargetDependency */ = {
+		F10000112FDE200000000001 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 045AD5672FDE110400CFE502 /* Formula1Update */;
-			targetProxy = 045AD5762FDE110600CFE502 /* PBXContainerItemProxy */;
-		};
-		045AD5812FDE110600CFE502 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 045AD5672FDE110400CFE502 /* Formula1Update */;
-			targetProxy = 045AD5802FDE110600CFE502 /* PBXContainerItemProxy */;
+			target = F10000092FDE200000000001 /* Formula1Widget */;
+			targetProxy = F10000102FDE200000000001 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -395,6 +379,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HB5N6KTWH2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -422,6 +407,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HB5N6KTWH2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -442,71 +428,51 @@
 			};
 			name = Release;
 		};
-		045AD58D2FDE110600CFE502 /* Debug */ = {
+		F100001D2FDE200000000001 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				DEVELOPMENT_TEAM = HB5N6KTWH2;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Formula1Widget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.divyam.Formula1UpdateTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.divyam.Formula1Update.Formula1Widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Formula1Update.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Formula1Update";
 			};
 			name = Debug;
 		};
-		045AD58E2FDE110600CFE502 /* Release */ = {
+		F100001E2FDE200000000001 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				DEVELOPMENT_TEAM = HB5N6KTWH2;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Formula1Widget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.divyam.Formula1UpdateTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.divyam.Formula1Update.Formula1Widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Formula1Update.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Formula1Update";
-			};
-			name = Release;
-		};
-		045AD5902FDE110600CFE502 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.divyam.Formula1UpdateUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Formula1Update;
-			};
-			name = Debug;
-		};
-		045AD5912FDE110600CFE502 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.divyam.Formula1UpdateUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Formula1Update;
 			};
 			name = Release;
 		};
@@ -531,20 +497,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		045AD58C2FDE110600CFE502 /* Build configuration list for PBXNativeTarget "Formula1UpdateTests" */ = {
+		F10000132FDE200000000001 /* Build configuration list for PBXNativeTarget "Formula1Widget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				045AD58D2FDE110600CFE502 /* Debug */,
-				045AD58E2FDE110600CFE502 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		045AD58F2FDE110600CFE502 /* Build configuration list for PBXNativeTarget "Formula1UpdateUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				045AD5902FDE110600CFE502 /* Debug */,
-				045AD5912FDE110600CFE502 /* Release */,
+				F100001D2FDE200000000001 /* Debug */,
+				F100001E2FDE200000000001 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
