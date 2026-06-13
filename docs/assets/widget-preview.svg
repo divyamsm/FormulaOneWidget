@@ -1,17 +1,57 @@
-<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="960" height="540" rx="36" fill="#f3f4f6"/>
-  <rect x="138" y="152" width="684" height="236" rx="48" fill="#111418"/>
-  <rect x="138" y="152" width="12" height="236" fill="#ff2b1f"/>
-  <text x="184" y="214" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800">RACE WEEKEND</text>
-  <text x="184" y="268" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="900">Barcelona GP</text>
-  <text x="184" y="304" fill="#c7ccd4" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600">Barcelona, Spain</text>
-  <text x="184" y="352" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800">Race Sun 6:00 AM</text>
-  <rect x="556" y="196" width="214" height="146" rx="18" fill="#262a31"/>
-  <text x="582" y="234" fill="#c7ccd4" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="800">Last Quali</text>
-  <text x="582" y="272" fill="#ff2b1f" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="900">1</text>
-  <text x="622" y="272" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="900">RUS</text>
-  <text x="694" y="272" fill="#c7ccd4" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">1:14.679</text>
-  <text x="582" y="306" fill="#ff2b1f" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="900">2</text>
-  <text x="622" y="306" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="900">HAM</text>
-  <text x="694" y="306" fill="#c7ccd4" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">1:14.743</text>
+<svg width="644" height="336" viewBox="0 0 644 336" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="wallpaper" x1="28" y1="21" x2="610" y2="335" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f8b2bd"/>
+      <stop offset="0.45" stop-color="#f5a4a1"/>
+      <stop offset="0.74" stop-color="#b2abc6"/>
+      <stop offset="1" stop-color="#8fd0ce"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="484" y1="4" x2="620" y2="147" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e8bf66"/>
+      <stop offset="1" stop-color="#d7a05f" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="12" y="20" width="600" height="286" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <rect width="644" height="336" fill="url(#wallpaper)"/>
+  <path d="M522 -4C572 19 624 -11 661 -15" stroke="#719799" stroke-width="3" opacity="0.72"/>
+  <path d="M326 327C331 280 355 241 406 225C450 211 492 218 532 245" stroke="#738eb2" stroke-width="3" opacity="0.56"/>
+  <rect x="430" y="-7" width="242" height="164" rx="82" fill="url(#gold)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="32" y="28" width="568" height="264" rx="36" fill="#101317"/>
+    <rect x="32" y="28" width="9" height="264" fill="#ff2a1e"/>
+
+    <text x="438" y="141" fill="#ffffff" fill-opacity="0.035" font-family="Arial, Helvetica, sans-serif" font-size="124" font-weight="900">F1</text>
+    <rect x="57" y="45" width="194" height="37" rx="18.5" fill="#353940"/>
+    <circle cx="75" cy="64" r="5" fill="#d7dbe1"/>
+    <text x="90" y="70" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="900">RACE WEEKEND</text>
+
+    <text x="56" y="135" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="900">Barcelona GP</text>
+    <text x="56" y="176" fill="#c8ccd4" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700">Barcelona, Spain</text>
+    <text x="56" y="224" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="900">Race Sun 6:00 AM</text>
+    <text x="56" y="257" fill="#ff2a1e" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="800">13h 2m remaining</text>
+
+    <rect x="343" y="102" width="232" height="174" rx="13" fill="#292d33" fill-opacity="0.94"/>
+    <text x="358" y="135" fill="#d8dbe1" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="900">Last Quali</text>
+
+    <text x="359" y="173" fill="#ff2a1e" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="900">1</text>
+    <text x="390" y="173" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="900">RUS</text>
+    <text x="473" y="173" fill="#c7cbd3" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="800">1:14.679</text>
+
+    <text x="359" y="213" fill="#ff2a1e" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="900">2</text>
+    <text x="390" y="213" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="900">H...</text>
+    <text x="473" y="213" fill="#c7cbd3" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="800">1:14.743</text>
+
+    <text x="359" y="253" fill="#ff2a1e" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="900">3</text>
+    <text x="390" y="253" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="900">ANT</text>
+    <text x="473" y="253" fill="#c7cbd3" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="800">1:14.998</text>
+
+    <rect x="522" y="48" width="50" height="30" rx="15" fill="#262a30"/>
+    <text x="533" y="70" fill="#d8dbe1" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="900">ESP</text>
+  </g>
+
+  <text x="235" y="321" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700">Formula1Update</text>
 </svg>
