@@ -146,18 +146,20 @@ private struct LargeF1Card: View {
     let snapshot: F1WidgetSnapshot
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 15) {
+        VStack(alignment: .leading, spacing: 10) {
             HStack(alignment: .top) {
-                VStack(alignment: .leading, spacing: 4) {
+                VStack(alignment: .leading, spacing: 3) {
                     StatusBadge(status: snapshot.status)
                     Text(snapshot.raceName)
-                        .font(.system(size: 25, weight: .black, design: .rounded))
+                        .font(.system(size: 24, weight: .black, design: .rounded))
                         .foregroundStyle(F1Theme.primary)
                         .lineLimit(1)
-                        .minimumScaleFactor(0.8)
+                        .minimumScaleFactor(0.72)
                     Text(snapshot.location)
                         .font(.caption.weight(.medium))
                         .foregroundStyle(F1Theme.secondary)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.8)
                 }
                 Spacer()
                 Text(snapshot.countryCode ?? "F1")
@@ -173,29 +175,38 @@ private struct LargeF1Card: View {
                     .minimumScaleFactor(0.75)
             } else if let nextSession = snapshot.nextSession {
                 HStack(alignment: .firstTextBaseline) {
-                    VStack(alignment: .leading, spacing: 3) {
+                    VStack(alignment: .leading, spacing: 2) {
                         Text("Next \(nextSession.shortName)")
                             .font(.caption.weight(.bold))
                             .foregroundStyle(F1Theme.secondary)
                         Text(F1Formatters.raceDate.string(from: nextSession.startsAt))
-                            .font(.title3.weight(.bold))
+                            .font(.system(size: 20, weight: .black, design: .rounded))
                             .foregroundStyle(F1Theme.primary)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.82)
                     }
                     Spacer()
                     Text(F1Formatters.countdown(to: nextSession.startsAt))
-                        .font(.title.weight(.black))
+                        .font(.system(size: 32, weight: .black, design: .rounded))
                         .foregroundStyle(F1Theme.primary)
                         .monospacedDigit()
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.76)
                 }
-                .padding(12)
+                .padding(.horizontal, 12)
+                .padding(.vertical, 9)
                 .background(F1Theme.panel, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
             }
 
-            if !snapshot.weekendSchedule.isEmpty {
-                ScheduleList(sessions: Array(snapshot.weekendSchedule.prefix(5)), nextSession: snapshot.nextSession)
-            }
+            HStack(alignment: .top, spacing: 10) {
+                if !snapshot.weekendSchedule.isEmpty {
+                    ScheduleList(sessions: Array(snapshot.weekendSchedule.prefix(5)), nextSession: snapshot.nextSession, compact: true)
+                        .frame(width: 156, alignment: .topLeading)
+                }
 
-            ResultPanel(result: snapshot.lastResult)
+                ResultPanel(result: snapshot.lastResult, compact: true)
+                    .frame(maxWidth: .infinity, alignment: .topLeading)
+            }
 
             Spacer(minLength: 0)
             Text(F1Formatters.updatedText(snapshot.updatedAt))
@@ -252,29 +263,32 @@ private struct ResultPanel: View {
 private struct ScheduleList: View {
     let sessions: [F1SessionSummary]
     let nextSession: F1SessionSummary?
+    var compact = false
 
     var body: some View {
-        VStack(spacing: 5) {
+        VStack(spacing: compact ? 3 : 5) {
             ForEach(sessions) { session in
-                HStack(spacing: 8) {
+                HStack(spacing: compact ? 6 : 8) {
                     Text(session.shortName)
-                        .font(.caption.weight(.bold))
+                        .font(.system(size: compact ? 12 : 13, weight: .bold))
                         .foregroundStyle(F1Theme.primary)
-                        .frame(width: 42, alignment: .leading)
+                        .frame(width: compact ? 36 : 42, alignment: .leading)
                     Text(F1Formatters.raceDate.string(from: session.startsAt))
-                        .font(.caption.monospacedDigit().weight(.medium))
+                        .font(.system(size: compact ? 11 : 12, weight: .medium, design: .monospaced))
                         .foregroundStyle(F1Theme.secondary)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.76)
                     Spacer()
                     if session.id == nextSession?.id {
                         Text("Next")
-                            .font(.caption2.weight(.bold))
+                            .font(.system(size: compact ? 10 : 11, weight: .bold))
                             .foregroundStyle(F1Theme.accent)
                     }
                 }
-                .padding(.vertical, 1)
+                .padding(.vertical, compact ? 0 : 1)
             }
         }
-        .padding(12)
+        .padding(compact ? 10 : 12)
         .background(F1Theme.panel, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
     }
 }
