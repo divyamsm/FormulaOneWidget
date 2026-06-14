@@ -43,7 +43,7 @@ private struct SmallF1Card: View {
             Spacer(minLength: 0)
 
             Text(snapshot.raceName)
-                .font(.system(size: 17, weight: .black, design: .rounded))
+                .font(.system(size: 17, weight: .heavy, design: .default))
                 .foregroundStyle(F1Theme.primary)
                 .lineLimit(2)
                 .minimumScaleFactor(0.78)
@@ -56,7 +56,7 @@ private struct SmallF1Card: View {
                     .minimumScaleFactor(0.7)
             } else if let nextSession = snapshot.nextSession {
                 Text(F1Formatters.countdown(to: nextSession.startsAt))
-                    .font(.system(size: 32, weight: .black, design: .rounded))
+                    .font(.system(size: 32, weight: .heavy, design: .default))
                     .foregroundStyle(F1Theme.primary)
                     .lineLimit(1)
                     .minimumScaleFactor(0.7)
@@ -67,7 +67,7 @@ private struct SmallF1Card: View {
                     .minimumScaleFactor(0.75)
             } else if let result = snapshot.lastResult, let winner = result.topThree.first {
                 Text("\(winner.driverCode) P1")
-                    .font(.system(size: 32, weight: .black, design: .rounded))
+                    .font(.system(size: 32, weight: .heavy, design: .default))
                     .foregroundStyle(F1Theme.primary)
                 Text(result.sessionShortName)
                     .font(.caption.weight(.medium))
@@ -98,7 +98,7 @@ private struct MediumF1Card: View {
             HStack(alignment: .bottom, spacing: 14) {
                 VStack(alignment: .leading, spacing: 5) {
                     Text(snapshot.raceName)
-                        .font(.system(size: 22, weight: .black, design: .rounded))
+                        .font(.system(size: 22, weight: .heavy, design: .default))
                         .foregroundStyle(F1Theme.primary)
                         .lineLimit(1)
                         .minimumScaleFactor(0.76)
@@ -118,7 +118,7 @@ private struct MediumF1Card: View {
                             .padding(.top, 2)
                     } else if let nextSession = snapshot.nextSession {
                         Text("\(nextSession.shortName) \(F1Formatters.raceDate.string(from: nextSession.startsAt))")
-                            .font(.system(size: 17, weight: .bold, design: .rounded))
+                            .font(.system(size: 17, weight: .heavy, design: .default))
                             .foregroundStyle(F1Theme.primary)
                             .lineLimit(1)
                             .minimumScaleFactor(0.8)
@@ -151,7 +151,7 @@ private struct LargeF1Card: View {
                 VStack(alignment: .leading, spacing: 3) {
                     StatusBadge(status: snapshot.status)
                     Text(snapshot.raceName)
-                        .font(.system(size: 24, weight: .black, design: .rounded))
+                        .font(.system(size: 24, weight: .heavy, design: .default))
                         .foregroundStyle(F1Theme.primary)
                         .lineLimit(1)
                         .minimumScaleFactor(0.72)
@@ -180,14 +180,14 @@ private struct LargeF1Card: View {
                             .font(.caption.weight(.bold))
                             .foregroundStyle(F1Theme.secondary)
                         Text(F1Formatters.raceDate.string(from: nextSession.startsAt))
-                            .font(.system(size: 20, weight: .black, design: .rounded))
+                            .font(.system(size: 20, weight: .heavy, design: .default))
                             .foregroundStyle(F1Theme.primary)
                             .lineLimit(1)
                             .minimumScaleFactor(0.82)
                     }
                     Spacer()
                     Text(F1Formatters.countdown(to: nextSession.startsAt))
-                        .font(.system(size: 32, weight: .black, design: .rounded))
+                        .font(.system(size: 32, weight: .heavy, design: .default))
                         .foregroundStyle(F1Theme.primary)
                         .monospacedDigit()
                         .lineLimit(1)
@@ -201,7 +201,7 @@ private struct LargeF1Card: View {
             HStack(alignment: .top, spacing: 10) {
                 if !snapshot.weekendSchedule.isEmpty {
                     ScheduleList(sessions: Array(snapshot.weekendSchedule.prefix(5)), nextSession: snapshot.nextSession, compact: true)
-                        .frame(width: 156, alignment: .topLeading)
+                        .frame(width: 146, alignment: .topLeading)
                 }
 
                 ResultPanel(result: snapshot.lastResult, compact: true)
@@ -224,7 +224,7 @@ private struct ResultPanel: View {
     var body: some View {
         VStack(alignment: .leading, spacing: compact ? 6 : 8) {
             Text(result.map { "Last \($0.sessionShortName)" } ?? "Last Session")
-                .font(.system(size: compact ? 11 : 12, weight: .black))
+                .font(.system(size: compact ? 11 : 12, weight: .heavy, design: .default))
                 .foregroundStyle(F1Theme.secondary)
                 .lineLimit(1)
                 .minimumScaleFactor(0.75)
@@ -233,13 +233,16 @@ private struct ResultPanel: View {
                 ForEach(result.topThree) { driver in
                     HStack(spacing: compact ? 5 : 8) {
                         Text("\(driver.position)")
-                            .font(.system(size: compact ? 12 : 13, weight: .black, design: .rounded))
+                            .font(.system(size: compact ? 12 : 13, weight: .heavy, design: .default))
                             .foregroundStyle(F1Theme.accent)
-                            .frame(width: compact ? 13 : 16, alignment: .leading)
+                            .frame(width: compact ? 12 : 16, alignment: .leading)
                         Text(driver.driverCode)
-                            .font(.system(size: compact ? 13 : 14, weight: .black, design: .rounded))
+                            .font(.system(size: compact ? 13 : 14, weight: .heavy, design: .default))
+                            .fontWidth(.condensed)
                             .foregroundStyle(F1Theme.primary)
-                            .frame(width: compact ? 31 : 36, alignment: .leading)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.82)
+                            .frame(width: compact ? 38 : 40, alignment: .leading)
                         Text(driver.displayValue)
                             .font(.system(size: compact ? 10 : 11, weight: .bold, design: .monospaced))
                             .foregroundStyle(F1Theme.secondary)
@@ -270,19 +273,21 @@ private struct ScheduleList: View {
             ForEach(sessions) { session in
                 HStack(spacing: compact ? 6 : 8) {
                     Text(session.shortName)
-                        .font(.system(size: compact ? 12 : 13, weight: .bold))
+                        .font(.system(size: compact ? 12 : 13, weight: .heavy, design: .default))
+                        .fontWidth(.condensed)
                         .foregroundStyle(F1Theme.primary)
-                        .frame(width: compact ? 36 : 42, alignment: .leading)
+                        .lineLimit(1)
+                        .frame(width: compact ? 34 : 42, alignment: .leading)
                     Text(F1Formatters.raceDate.string(from: session.startsAt))
-                        .font(.system(size: compact ? 11 : 12, weight: .medium, design: .monospaced))
+                        .font(.system(size: compact ? 11 : 12, weight: .semibold, design: .monospaced))
                         .foregroundStyle(F1Theme.secondary)
                         .lineLimit(1)
-                        .minimumScaleFactor(0.76)
+                        .minimumScaleFactor(0.9)
                     Spacer()
                     if session.id == nextSession?.id {
-                        Text("Next")
-                            .font(.system(size: compact ? 10 : 11, weight: .bold))
-                            .foregroundStyle(F1Theme.accent)
+                        Circle()
+                            .fill(F1Theme.accent)
+                            .frame(width: compact ? 5 : 6, height: compact ? 5 : 6)
                     }
                 }
                 .padding(.vertical, compact ? 0 : 1)
@@ -341,7 +346,7 @@ private struct F1Background: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
 
             Text("F1")
-                .font(.system(size: 78, weight: .black, design: .rounded))
+                .font(.system(size: 78, weight: .heavy, design: .default))
                 .foregroundStyle(.white.opacity(0.035))
                 .padding(.trailing, 8)
                 .padding(.top, -2)
